@@ -71,7 +71,7 @@ class TagAdmin(BaseOwnerAdmin):                  #(admin.ModelAdmin):
 class PostAdmin(BaseOwnerAdmin):            #(admin.ModelAdmin):
     list_display = ('title', 'category', 'status', 'created_time', 'operator')
     list_display_links = []
-    list_filter = ['category', ]
+    list_filter = [CategoryOwnerFilter, ]
     search_fields = ['title', 'category__name']
     actions_on_top = False
     actions_on_bottom = True
